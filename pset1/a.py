@@ -12,4 +12,9 @@ portion_down_payment=0.25
 current_savings=0
 r = 0.04
 Number_of_months=1
+while current_savings<total_cost*(portion_down_payment):
+    Number_of_months=Number_of_months+1
+    current_savings=current_savings+monthly_salary*portion_saved
+    current_savings=current_savings*r/12+current_savings
 
+print('Number of months:',Number_of_months)
